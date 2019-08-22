@@ -1,0 +1,16 @@
+{
+  "name": "hacker-rank-runner",
+  "version": "1.0.0",
+  "main": "runner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "hacker-rank cli runner",
+  "dependencies": {
+    "chalk": "2.4.2",
+    "chokidar": "3.0.2"
+  }
+}
