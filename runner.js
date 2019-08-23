@@ -19,14 +19,14 @@ async function runner (dir = '', fileWait = 500) {
   const child = spawn('node', [dir], { env: { OUTPUT_PATH: outputPath } })
   child.stdin.setEncoding('utf-8')
   child.stdout.pipe(process.stdout)
-  child.stderr.on('data', (data) => console.error(chalk.red(`${data}`)))
+  child.stderr.on('data', (data) => console.error(chalk.red(data)))
   inputLines.forEach(line => child.stdin.write(line + '\n'))
   child.stdin.emit('end')
   child.stdin.end()
   await sleep(fileWait)
   if (fs.existsSync(outputPath)) {
     const result = fs.readFileSync(outputPath, 'utf-8')
-    console.log(chalk.green(`output`))
+    console.log(chalk.green('output'))
     console.log(result.trim())
   } else {
     console.error('output not found')
