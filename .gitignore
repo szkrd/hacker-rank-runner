@@ -62,7 +62,7 @@ typings/
 
 .idea
 output.txt
-problems/*
-problems/**/*.{js,txt}
-!problems/simple-array-sum/index.js
-!problems/simple-array-sum/input.txt
+#problems/*
+#problems/**/*.{js,txt}
+#!problems/simple-array-sum/index.js
+#!problems/simple-array-sum/input.txt
