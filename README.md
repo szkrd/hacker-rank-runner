@@ -12,10 +12,12 @@ Run and debug [HackerRank](https://www.hackerrank.com/) tests from node proper.
    **watcher:** `node watcher`
 5. joy
 
+![screenshot](./docs/terminal-screenshot.png)
+
 ## Why
 
-There's **no expected output** comparison, the runner will print
-the output of the script (be it a stream or plain stdout), it's
+There's only **basic expected output** comparison, the runner will print
+the output of the script (be it a stream or plain stdout), but mostly it's
 up to you to decide whether that's the value you're looking for
 or not.
 
