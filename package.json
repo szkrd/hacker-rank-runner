@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "runner.js",
   "scripts": {
+    "all": "node run-all",
     "watch": "node watcher"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "description": "hacker-rank cli runner",
   "dependencies": {
     "chalk": "2.4.2",
-    "chokidar": "3.0.2"
+    "chokidar": "3.0.2",
+    "shelljs": "0.8.4"
   }
 }
