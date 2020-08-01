@@ -40,7 +40,7 @@ function prettyPrintError (errorText) {
 }
 
 function getCheckmarkGlyph (expectation, result) {
-  return expectation.length > 0 && result.trim() === expectation.join('\n').trim() ? chalk.cyan(' ✔') : ''
+  return expectation.length > 0 && result === expectation.join('\n') ? chalk.cyan('✔') : ''
 }
 
 async function runner (dir = '', fileWait = 500) {
@@ -77,11 +77,11 @@ async function runner (dir = '', fileWait = 500) {
     if (fs.existsSync(outputPath)) {
       const result = fs.readFileSync(outputPath, 'utf-8')
       console.info(chalk.green('\nstream output:'))
-      console.info(chalk.greenBright(result.trim()) + getCheckmarkGlyph(expectation, result))
+      console.info(chalk.greenBright(result) + getCheckmarkGlyph(expectation, result))
     } else if (lastPlainOutput) {
       // otherwise just print the last console.log
       console.info(chalk.green('\nlast plain output:'))
-      console.info(chalk.greenBright(lastPlainOutput.trim()) + getCheckmarkGlyph(expectation, lastPlainOutput))
+      console.info(chalk.greenBright(lastPlainOutput) + getCheckmarkGlyph(expectation, lastPlainOutput))
     }
   }
 
