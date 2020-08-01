@@ -7,9 +7,9 @@ For example, if your niece is turning 4 years old, and the cake will have 4 cand
 ## Input Format
 
 1. The first line contains a single integer,
-   *n*, denoting the number of candles on the cake.
-2. The second line contains *n* space-separated integers,
-   where each integer *i* describes the height of candle .
+   _n_, denoting the number of candles on the cake.
+2. The second line contains _n_ space-separated integers,
+   where each integer _i_ describes the height of candle .
 
 ## Output Format
 

@@ -9,17 +9,17 @@ let inputString = ''
 let currentLine = 0
 
 process.stdin.on('data', function (inputStdin) {
-    inputString += inputStdin
+  inputString += inputStdin
 })
 
 process.stdin.on('end', function () {
-    inputString = inputString.split('\n')
+  inputString = inputString.split('\n')
 
-    main()
+  main()
 })
 
-function readLine () {
-    return inputString[currentLine++]
+function readLine() {
+  return inputString[currentLine++]
 }
 
 /*
@@ -29,30 +29,33 @@ function readLine () {
  * The function accepts 2D_INTEGER_ARRAY arr as parameter.
  */
 
-function diagonalDifference (arr) {
-    let sum1 = 0 // left to right
-    let sum2 = 0 // right to left
-    arr.forEach((row, i) => {
-        sum1 += row[i]
-        sum2 += row[row.length - 1 - i]
-    })
-    return Math.abs(sum2 - sum1)
+function diagonalDifference(arr) {
+  let sum1 = 0 // left to right
+  let sum2 = 0 // right to left
+  arr.forEach((row, i) => {
+    sum1 += row[i]
+    sum2 += row[row.length - 1 - i]
+  })
+  return Math.abs(sum2 - sum1)
 }
 
-function main () {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH)
+function main() {
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH)
 
-    const n = parseInt(readLine().trim(), 10)
+  const n = parseInt(readLine().trim(), 10)
 
-    let arr = Array(n)
+  let arr = Array(n)
 
-    for (let i = 0; i < n; i++) {
-        arr[i] = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10))
-    }
+  for (let i = 0; i < n; i++) {
+    arr[i] = readLine()
+      .replace(/\s+$/g, '')
+      .split(' ')
+      .map((arrTemp) => parseInt(arrTemp, 10))
+  }
 
-    const result = diagonalDifference(arr)
+  const result = diagonalDifference(arr)
 
-    ws.write(result + '\n')
+  ws.write(result + '\n')
 
-    ws.end()
+  ws.end()
 }

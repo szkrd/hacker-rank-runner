@@ -1,6 +1,6 @@
 # Hacker rank runner
 
-Run and debug [HackerRank](https://www.hackerrank.com/) tests from node proper. 
+Run and debug [HackerRank](https://www.hackerrank.com/) tests from node proper.
 
 Be sure to check HR's [node version](https://www.hackerrank.com/environment), which
 is **10.16.3** as of this writing (same as the one in the local [nvmrc](./.nvmrc)).
